@@ -1,0 +1,39 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <h1>
+            Востребованность
+        </h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Год</th>
+                <th>Зарплата</th>
+                <th>Кол-во вакансий</th>
+                <th>Зарплата Web-разработчика</th>
+                <th>Кол-во вакансий на Web-разработчика</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for element in row %}
+                        <td>{{ element }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="graph">
+            <div class="graph-row">
+                <img src="{% static 'img/demand/salary_by_year.png' %}" alt="">
+                <img src="{% static 'img/demand/salary_by_year_profession.png' %}" alt="">
+            </div>
+            <div class="graph-row">
+                <img src="{% static 'img/demand/count_by_year.png' %}" alt="">
+                <img src="{% static 'img/demand/count_by_year_profession.png' %}" alt="">
+            </div>
+        </div>
+    </main>
+{% endblock %}

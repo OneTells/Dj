@@ -1,0 +1,95 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <h1>
+            География
+        </h1>
+        <div class="geo-wrapper">
+            <div class="geo-column">
+                <table class="table table-geo">
+                    <thead>
+                    <tr>
+                        <th>Город</th>
+                        <th>Зарплата</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data1 %}
+                        <tr>
+                            {% for element in row %}
+                                <td>{{ element }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="graph-row">
+                    <img src="{% static 'img/geography/salary_by_city.png' %}" alt="">
+                </div>
+                <table class="table table-geo">
+                    <thead>
+                    <tr>
+                        <th>Город</th>
+                        <th>Доля вакансий</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data2 %}
+                        <tr>
+                            {% for element in row %}
+                                <td>{{ element }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="graph-row">
+                    <img src="{% static 'img/geography/vacancy_rate_by_city.png' %}" alt="">
+                </div>
+            </div>
+            <div class="geo-column">
+                <table class="table table-geo">
+                    <thead>
+                    <tr>
+                        <th>Город</th>
+                        <th>Зарплата Web-разработчика</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data3 %}
+                        <tr>
+                            {% for element in row %}
+                                <td>{{ element }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="graph-row">
+                    <img src="{% static 'img/geography/salary_by_city_profession.png' %}" alt="">
+                </div>
+                <table class="table table-geo">
+                    <thead>
+                    <tr>
+                        <th>Город</th>
+                        <th>Доля вакансий Web-разработчика</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data4 %}
+                        <tr>
+                            {% for element in row %}
+                                <td>{{ element }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="graph-row">
+                    <img src="{% static 'img/geography/vacancy_rate_city_profession.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

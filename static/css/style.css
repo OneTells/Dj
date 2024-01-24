@@ -1,0 +1,393 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    font-size: 20px;
+    background-color: #f6f8fa;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #f6f8fa;
+    border-bottom: solid 1px #D1D1D1;
+    background-attachment: scroll;
+    align-items: center;
+    justify-content: left;
+}
+
+header img {
+    display: block;
+}
+
+header a {
+    margin-left: 110px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.navigation {
+    position: sticky;
+    float: left;
+    top: 0;
+}
+
+.nav-wrap {
+    height: 500px;
+    width: 350px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin: 0 0 0 350px;
+    padding: 0 120px;
+    box-shadow: #2E3233 50px 0;
+    background-color: white;
+}
+
+main p {
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: auto;
+    padding-right: auto;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+footer {
+    margin-left: 350px;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #ddf4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* footer p {
+    margin: 0;
+} */
+
+.footer-wrap {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 580px;
+
+}
+
+.footer-wrap p {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-img {
+    display: block;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.nav-items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 40px;
+}
+
+.nav-items-link {
+    display: flex;
+}
+
+.nav-items:hover {
+    border-radius: 10px;
+    background-color: rgba(221, 244, 255, 0.5);
+}
+
+.list-icon {
+    display: block;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.nav-items-link p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+
+/* СТИЛИ НА ТАБЛИЦУ */
+
+.table {
+    width: 100%;
+    border: none;
+    padding-bottom: 40px;
+
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #C0D8EF;
+    font-size: 14px;
+}
+
+.table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #ECF5FF;
+}
+
+.table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* СТИЛИ НА ГРАФИКИ "ВОСТРЕБОВАННОСТЬ" */
+.graph {
+    display: flex;
+    flex-direction: column;
+}
+
+.graph-row {
+    display: flex;
+    padding-bottom: 40px;
+}
+
+
+/* СТИЛИ НА ГРАФИКИ "ГЕОГРАФИЯ" */
+
+.geo-wrapper {
+    display: flex;
+    column-gap: 60px;
+}
+
+.graph-row img {
+    display: block;
+    padding-bottom: 100px;
+}
+
+.geo-column .table-geo {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* СТИЛИ НА "НАВЫКИ" */
+/* ПЕРВЫЙ СЛАЙДЕР */
+
+.page-title {
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}
+
+.slider-cover {
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* ВТОРОЙ СЛАЙДЕР */
+
+.slider2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-button2,
+.next-button2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+.prev-button2 {
+    left: 10px;
+}
+
+.next-button2 {
+    right: 10px;
+}
+
+
+/* СТИЛИ НА "ПОСЛЕДНИЕ ВАКАНСИИ" */
+
+/* СТИЛЬ НА ССЫЛКИ В ТАБЛИЦЕ, ЧТОБЫ ВСЁ СМОТРЕЛОСЬ КРАСИВЕНЬКО (можно убрать) */
+/* table a {
+    font-style: italic;
+    color: black;
+} */
+
+.vacancy p {
+    padding: 0;
+}
+
+.vacancy {
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #a7d8ff;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.vacancy-main-info {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vacancy-main-info p {
+    width: 300px;
+}
+
+.vacancy-more {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-size: 15px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a8dff;
+    margin-bottom: 5px;
+}
+
+.vacancy-data-time {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.salary {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.company {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.region {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.skills {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.vacancy-data-time {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.vacancy a {
+    text-decoration: none;
+}
+
+.description b {
+    font-size: 20px;
+}

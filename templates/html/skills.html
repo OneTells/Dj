@@ -1,0 +1,92 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <h1>
+            ТОП-20 навыков по годам
+        </h1>
+        <table class="table">
+            <thead>
+            <tr>
+                {% for element in cap1 %}
+                    <th>{{ element }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data1 %}
+                <tr>
+                    {% for element in row %}
+                        <td>{{ element }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="slider-container">
+            <div class="slider-cover">
+                <div class="slider">
+                    <img src="{% static 'img/skills/key_skills_2015.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2016.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2017.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2018.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2019.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2020.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2021.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2022.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_2023.png' %}" width="600" height="400" alt="">
+                </div>
+            </div>
+            <button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">
+                <img src="{% static 'img/arrow-left.svg' %}" alt="" width="25">
+            </button>
+            <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">
+                <img src="{% static 'img/arrow-right.svg' %}" alt="" width="25">
+            </button>
+        </div>
+        <h1>
+            ТОП-20 навыков по годам для Web-разработчика
+        </h1>
+        <table class="table">
+            <thead>
+            <tr>
+                {% for element in cap2 %}
+                    <th>{{ element }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data2 %}
+                <tr>
+                    {% for element in row %}
+                        <td>{{ element }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="slider-container">
+            <div class="slider-cover">
+                <div class="slider2">
+                    <img src="{% static 'img/skills/key_skills_profession_2015.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2016.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2017.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2018.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2019.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2020.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2021.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2022.png' %}" width="600" height="400" alt="">
+                    <img src="{% static 'img/skills/key_skills_profession_2023.png' %}" width="600" height="400" alt="">
+                </div>
+            </div>
+            <button class="prev-button2" type="button" aria-label="Посмотреть предыдущий слайд">
+                <img src="{% static 'img/arrow-left.svg' %}" alt="" width="25">
+            </button>
+            <button class="next-button2" type="button" aria-label="Посмотреть следующий слайд">
+                <img src="{% static 'img/arrow-right.svg' %}" alt="" width="25">
+            </button>
+        </div>
+    </main>
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/slider2.js' %}"></script>
+{% endblock %}

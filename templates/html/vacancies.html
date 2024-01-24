@@ -1,0 +1,28 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <h1>
+            Последние вакансии
+        </h1>
+        {% for n, d, s, e, sa, a, da, u in data %}
+            <div class="vacancy">
+                <div class="vacancy-main-info">
+                    <a href="{{ u }}"><p class="name">{{ n }}</p></a>
+                    <p class="salary">{{ sa }}</p>
+                    <p class="company">{{ e }}</p>
+                    <p class="region">{{ a }}</p>
+                    <p class="skills">{{ s }}</p>
+                </div>
+                <div class="vacancy-more">
+                    <div class="vacancy-description">
+                        <p class="description"><b>Описание: </b>{{ d }}</p>
+                    </div>
+                    <div class="vacancy-data-time">
+                        <p>{{ da }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}

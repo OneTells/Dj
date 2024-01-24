@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/base/favicon.ico' %}">
+    <title>Python проект</title>
+</head>
+<body>
+<header>
+    <a href="/"><img src="{% static 'img/base/logo.svg' %}" alt="" width="100"></a>
+</header>
+<nav class="navigation">
+    <div class="nav-wrap">
+        <ul class="nav-list">
+            <li class="nav-items">
+                <a href="/" class="nav-items-link">
+                    <img class="list-icon" src="{% static 'img/base/main.svg' %}" alt="" width="24">
+                    <p>Главная</p>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="demand" class="nav-items-link">
+                    <img class="list-icon" src="{% static 'img/base/demand.svg' %}" alt="" width="24">
+                    <p>Востребованность</p>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="geography" class="nav-items-link">
+                    <img class="list-icon" src="{% static 'img/base/geography.svg' %}" alt="" width="24">
+                    <p>География</p>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="skills" class="nav-items-link">
+                    <img class="list-icon" src="{% static 'img/base/skills.svg' %}" alt="" width="24">
+                    <p>Навыки</p>
+                </a>
+            </li>
+            <li class="nav-items">
+                <a href="vacancies" class="nav-items-link">
+                    <img class="list-icon" src="{% static 'img/base/vacancies.svg' %}" alt="" width="24">
+                    <p>Последние вакансии</p>
+                </a>
+            </li>
+        </ul>
+        <div class="footer-wrap">
+            <p>Копытов Егор Алексеевич</p>
+            <p>Группа: РИ-220910</p>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>
